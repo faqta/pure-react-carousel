@@ -456,12 +456,12 @@ const Slider = class Slider extends React.Component {
 
     if (orientation === 'vertical') {
       trayStyle.transform = `translateY(${trans}) translateY(${this.state.deltaY}px)`;
-      trayStyle['--webkit-transform'] = `translateY(${trans}) translateY(${this.state.deltaY}px)`;
+      trayStyle.webkitTransform = `translateY(${trans}) translateY(${this.state.deltaY}px)`;
       trayStyle.width = pct(100);
     } else {
       trayStyle.width = pct(slideTraySize);
       trayStyle.transform = `translateX(${trans}) translateX(${this.state.deltaX}px)`;
-      trayStyle['--webkit-transform'] = `translateX(${trans}) translateX(${this.state.deltaX}px)`;
+      trayStyle.webkitTransform = `translateX(${trans}) translateX(${this.state.deltaX}px)`;
     }
 
     const sliderClasses = cn([
